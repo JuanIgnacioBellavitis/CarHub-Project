@@ -6,6 +6,7 @@ import magnifyingGlass from '@/public/magnifying-glass.svg'
 import { useRouter } from "next/navigation";
 import modelIcon from '@/public/model-icon.png'
 import { toast } from "react-hot-toast";
+import { SearchBarProps } from "@/types";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
     <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
@@ -19,7 +20,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
     </button>
 );
 
-export default function SearchBar({setManufacturer, setModel}) {
+export default function SearchBar({setManufacturer, setModel} : SearchBarProps) {
 
     const [searchManufacturer, setSearchManuFacturer] = useState("");
     const [searchModel, setSearchModel] = useState("");

@@ -75,3 +75,8 @@ export interface CardDetailsProps {
   closeModal: () => void, 
   car: CarProps
 }
+
+export interface SearchBarProps {
+  setManufacturer: Dispatch<SetStateAction<string>>,
+  setModel: Dispatch<SetStateAction<string>>
+}
